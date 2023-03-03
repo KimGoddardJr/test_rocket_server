@@ -35,7 +35,7 @@ fn rocket() -> rocket::Rocket {
 fn catch_options(_path: PathBuf) -> rocket::http::Status {
     rocket::http::Status::Ok
 }
-// A struct to represent a to-do item
+// A struct to represent a to-do item. We'll use this to send and receive
 #[derive(Debug, Clone, Serialize, Deserialize,FromForm)]
 struct TodoItem {
     id: Option<i32>,
